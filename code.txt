@@ -1,0 +1,66 @@
+Improve the following code for:
+● Style
+● Simplicity
+● Maintainability
+
+
+def f():
+	if A:
+		z()
+			if B:
+				y()
+					if C:
+						x()
+							if D:
+								w()
+								return True
+							else:
+								v()
+								return False
+					else:
+						u()
+						return False
+			else:
+				t()
+				return False
+	else:
+		s()
+		return False
+
+
+		
+# v1 
+def f():
+    if !A:
+        s()
+        return False
+    z()
+    if !B:
+        t()
+        return False
+    y()
+    if !C:
+        u()
+        return False
+    x()
+    if !D:
+        v()
+        return False
+    w()
+    return True
+	
+# v2 
+def f():
+    operations = [
+        {"condition":A, "operation":z, "fallback":s},
+        {"condition":B, "operation":y, "fallback”:t},
+        {"condition":C, "operation":x, "fallback”:u},
+        {"condition":D, "operation":w, "fallback”:v},
+    ]
+    for o in operations:
+        if !o.condition:
+            o.fallback()
+            return False
+        o.operation()
+    return True
+	
