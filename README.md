@@ -1,8 +1,11 @@
 # coding_assignment_nl
 
 Improve the following code for:
+
 ● Style
+
 ● Simplicity
+
 ● Maintainability
 
 
